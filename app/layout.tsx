@@ -32,18 +32,32 @@ const fontMono = PT_Mono({
 const metadata: Metadata = {
   title: TITLE,
   description: TAGLINE,
-}
-const viewport: Viewport = { colorScheme: 'light', themeColor: '#fff' }
+  icons: {
+    icon: '/favicon.png',
+  },
+  openGraph: {
+    title: TITLE,
+    description: TAGLINE,
+    type: 'website',
+  },
+};
+const viewport: Viewport = {
+  colorScheme: 'light',
+  initialScale: 1,
+  themeColor: '#666b5e',
+  width: 'device-width',
+};
 
 const RootLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <html
-      lang="en"
       className={cn(
         fontHeading.variable,
         fontSans.variable,
         fontMono.variable
       )}
+      data-scroll-behavior="smooth"
+      lang="en"
     >
     <body>
     {children}

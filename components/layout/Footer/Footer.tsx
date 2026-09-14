@@ -18,18 +18,28 @@ const Footer: FC<Props> = () => {
   const year = useMemo(() => (new Date().getFullYear()), []);
 
   return (
-    <footer className={styles.container}>
-      <p className={styles.copyright}>© {year} Serenity Skincare</p>
+    <footer className={styles.footer}>
+      <div className={styles.allergyNotice}>
+        <img
+          alt="Allergy notice: Serenity Skincare products may contain nut derivites. Please review the ingredients arefully before purchasing."
+          loading="lazy"
+          src="/images/allergy_notice@1241x616.png"
+        />
+      </div>
 
-      <nav aria-label="Footer navigation" className={styles.menu}>
-        {mainMenu.map((item) => (
-          <Link key={item.href} href={item.href}>
-            {item.label}
-          </Link>
-        ))}
-      </nav>
+      <div className={styles.content}>
+        <p className={styles.copyright}>© {year} Serenity Skincare</p>
 
-      <SocialMediaLinks brandBackground={true} />
+        <nav aria-label="Footer navigation" className={styles.menu}>
+          {mainMenu.map((item) => (
+            <Link key={item.href} href={item.href}>
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+
+        <SocialMediaLinks brandBackground={true} />
+      </div>
     </footer>
   );
 };

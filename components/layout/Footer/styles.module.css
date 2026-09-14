@@ -1,13 +1,37 @@
-.container {
+.footer {
   align-items: center;
   color: #fff;
   background: var(--primary-color-500);
   display: flex;
   font-size: 14px;
+  flex: 1;
   flex-direction: column;
-  gap: 28px;
-  justify-content: space-between;
+  gap: var(--gap);
   padding: 64px clamp(24px, 5vw, 76px) 30px;
+}
+
+/* allergy notice */
+
+.allergyNotice {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.allergyNotice img {
+  width: 75%;
+}
+
+/* content */
+
+.content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  justify-content: center;
+  width: 100%;
 }
 
 .logo {
@@ -25,10 +49,10 @@
 .menu {
   align-items: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   font-family: var(--font-heading);
   font-weight: 600;
-  gap: 13px;
+  gap: clamp(24px, 4vw, 56px);
   justify-content: center;
   letter-spacing: .04em;
   text-transform: uppercase;
@@ -63,14 +87,14 @@
 
 /* tablet and up */
 @media (min-width: 768px) {
-  .container {
-    flex-direction: row;
-    align-items: center;
-    gap: 30px;
+  .allergyNotice img {
+    width: 50%;
   }
 
-  .menu {
+  .content {
     flex-direction: row;
-    gap: clamp(24px, 4vw, 56px);
+    align-items: center;
+    gap: var(--gap);
+    justify-content: space-between;
   }
 }
