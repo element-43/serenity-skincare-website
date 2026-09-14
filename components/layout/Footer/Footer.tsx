@@ -5,8 +5,8 @@ import Image from 'next/image';
 // components
 import SocialMediaLinks from '@/components/social/SocialMediaLinks';
 
-// data
-import mainMenu from '@/data/main-menu';
+// menus
+import mainMenu from '@/menus/main-menu';
 
 // styles
 import styles from './styles.module.css';
@@ -21,7 +21,7 @@ const Footer: FC<Props> = () => {
     <footer className={styles.container}>
       <p className={styles.copyright}>© {year} Serenity Skincare</p>
 
-      <nav aria-label="Footer navigation" className={styles.links}>
+      <nav aria-label="Footer navigation" className={styles.menu}>
         {mainMenu.map((item) => (
           <Link key={item.href} href={item.href}>
             {item.label}

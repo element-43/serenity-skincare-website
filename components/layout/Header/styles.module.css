@@ -29,8 +29,9 @@
   position: absolute;
 }
 
-@media (max-width: 700px) {
+/* tablet and up */
+@media (min-width: 768px) {
   .container {
-    height: var(--header-height-tablet);
+    height: var(--header-height-tablet-and-up);
   }
 }
