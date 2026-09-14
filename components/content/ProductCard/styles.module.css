@@ -1,0 +1,54 @@
+.container {
+  display: block;
+}
+
+.image {
+  aspect-ratio: 1 / 1.18;
+  background: var(--cream);
+  overflow: hidden;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+
+.container:hover img {
+  transform: scale(1.035);
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+
+.meta h3 {
+  margin: 6px 0 0;
+  font: 400 20px var(--serif);
+  letter-spacing: -.03em;
+}
+
+.meta > span {
+  font-size: 12px;
+  color: #737c74;
+}
+
+@media (max-width: 700px) {
+  .meta h3 {
+    font-size: 16px;
+  }
+
+  .meta > span {
+    font-size: 11px;
+  }
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: 10px;
+}

@@ -1,0 +1,33 @@
+.link {
+  align-items: center;
+  border-bottom-color: var(--primary-font-color);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  color: var(--primary-font-color);
+  display: inline-flex;
+  font-size: 14px;
+  gap: 12px;
+  margin-top: 28px;
+  padding-bottom: 7px;
+}
+
+.link svg {
+  width: 15px;
+  transition: transform .2s ease;
+}
+
+.link:hover svg,
+.link:focus-visible svg {
+  transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link svg {
+    transition: none;
+  }
+}
+
+.linkSecondary {
+  color: var(--secondary-font-color);
+  border-bottom-color: var(--secondary-font-color);
+}

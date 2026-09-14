@@ -1,0 +1,37 @@
+.container {
+  min-height: 270px;
+  padding: 32px;
+  background: var(--background);
+  display: flex;
+  flex-direction: column;
+}
+
+.quoteMark {
+  font: 54px/0.7 var(--serif);
+  color: var(--taupe);
+}
+
+.container blockquote {
+  margin: 22px 0 auto;
+  font: 400 23px/1.15 var(--serif);
+  letter-spacing: -.03em;
+}
+
+.container footer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 11px;
+  color: #758078;
+}
+
+.container footer strong {
+  color: var(--foreground);
+  font-weight: 400;
+}
+
+@media (max-width: 700px) {
+  .container {
+    min-height: 230px;
+  }
+}

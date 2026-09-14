@@ -1,0 +1,4 @@
+.container {
+  background: var(--primary-color-500);
+  padding: clamp(72px, 10vw, 140px) clamp(24px, 8vw, 120px);
+}

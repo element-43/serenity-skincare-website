@@ -12,6 +12,7 @@ const HeroSection: FC = () => {
       <img
         alt="Skincare samples on a table."
         className={styles.image}
+        loading="lazy"
         src="/images/hero_image@1672x941.png"
       />
 
