@@ -1,0 +1,36 @@
+.container {
+  align-items: center;
+  background: var(--primary-color-500);
+  color: #fff;
+  display: flex;
+  gap: 24px;
+  height: var(--header-height);
+  justify-content: space-between;
+  padding: 0 clamp(24px, 5vw, 76px);
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  display: block;
+  width: 240px;
+  min-width: 0;
+}
+
+.logoImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  background: transparent;
+  inset: 0 0 auto;
+  position: absolute;
+}
+
+@media (max-width: 700px) {
+  .container {
+    height: var(--header-height-tablet);
+  }
+}
