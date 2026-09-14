@@ -1,5 +1,5 @@
 .container {
-  min-height: 270px;
+  min-height: 230px;
   padding: 32px;
   background: var(--background);
   display: flex;
@@ -7,13 +7,13 @@
 }
 
 .quoteMark {
-  font: 54px/0.7 var(--serif);
+  font: 54px/0.7 var(--font-heading);
   color: var(--taupe);
 }
 
 .container blockquote {
   margin: 22px 0 auto;
-  font: 400 23px/1.15 var(--serif);
+  font: 400 23px/1.15 var(--font-heading);
   letter-spacing: -.03em;
 }
 
@@ -30,8 +30,8 @@
   font-weight: 400;
 }
 
-@media (max-width: 700px) {
+@media (min-width: 768px) {
   .container {
-    min-height: 230px;
+    min-height: 270px;
   }
 }

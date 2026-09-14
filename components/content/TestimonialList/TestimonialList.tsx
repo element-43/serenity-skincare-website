@@ -13,7 +13,7 @@ const TestimonialList: FC<Props> = ({ items }) => {
   return (
     <div className={styles.container}>
       {items.map((item) => (
-        <TestimonialCard key={item.name} item={item} />
+        <TestimonialCard key={item.slug} item={item} />
       ))}
     </div>
   );
