@@ -1,4 +1,32 @@
-import { SectionIntro, SiteShell } from '@/components/serenity-site'
+import { type Metadata, type NextPage } from 'next';
 
-export const metadata = { title: 'Our story' }
-export default function StoryPage() { return <SiteShell><main><section className="page-hero"><p className="eyebrow">Our story</p><h1>Less noise.<br />More noticing.</h1></section><section className="section split-section"><div className="image-frame"><img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=85" alt="Woman resting in a quiet natural setting" /></div><SectionIntro eyebrow="The beginning" title="A ritual, not a routine." text="Serenity began with a simple question: what if skincare felt less like fixing and more like listening? We make uncomplicated, sensory formulas for the in-between moments — the ones that help you feel at home in your own skin." /></section><section className="section band split-section"><SectionIntro eyebrow="Our ingredients" title="Plants with purpose." text="Every ingredient earns its place. We choose gentle, effective botanicals and pair them with proven actives, so each formula is kind to skin and clear about what it does." /><div className="image-frame"><img src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1200&q=85" alt="Lush green leaves close up" /></div></section></main></SiteShell> }
+// components
+import PageTitle from '@/components/content/PageTitle';
+
+// constants
+import { TITLE } from '@/constants';
+
+// containers
+import PageShell from '@/containers/PageShell';
+
+// styles
+import styles from './styles.module.css';
+
+export const metadata: Metadata = { title: `Our Story | ${TITLE}` };
+
+const OurStoryPage: NextPage = () => {
+  return (
+    <PageShell>
+      <main className={styles.main}>
+        <header className={styles.header}>
+          <PageTitle>Our Story</PageTitle>
+        </header>
+
+        <section className={styles.sectionStory} aria-label="The sotry behind Serenity Skincare">
+        </section>
+      </main>
+    </PageShell>
+  );
+};
+
+export default OurStoryPage;

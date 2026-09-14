@@ -53,7 +53,7 @@
 .meta h3 {
   font-family: var(--font-heading);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: -.03em;
   margin: 6px 0 0;
   text-transform: uppercase;
@@ -64,14 +64,4 @@
   text-transform: uppercase;
   letter-spacing: .14em;
   font-size: 10px;
-}
-
-@media (min-width: 768px) {
-  .meta h3 {
-    font-size: 20px;
-  }
-
-  .meta > span {
-    font-size: inherit;
-  }
 }

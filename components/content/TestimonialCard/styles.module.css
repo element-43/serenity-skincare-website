@@ -1,33 +1,34 @@
 .container {
-  min-height: 230px;
-  padding: 32px;
-  background: var(--background);
+  background: var(--surface-background-color);
   display: flex;
   flex-direction: column;
+  min-height: 230px;
+  padding: 32px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
 }
 
 .quoteMark {
+  color: var(--primary-font-color);
   font: 54px/0.7 var(--font-heading);
-  color: var(--taupe);
 }
 
-.container blockquote {
-  margin: 22px 0 auto;
+.quoteMarkBegin {
+  align-self: flex-start;
+}
+
+.quoteMarkEnd {
+  align-self: flex-end;
+}
+
+.quote {
+  align-self: center;
   font: 400 23px/1.15 var(--font-heading);
   letter-spacing: -.03em;
-}
-
-.container footer {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  font-size: 11px;
-  color: #758078;
-}
-
-.container footer strong {
-  color: var(--foreground);
-  font-weight: 400;
 }
 
 @media (min-width: 768px) {
