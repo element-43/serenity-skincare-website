@@ -1,0 +1,7 @@
+import { notFound } from 'next/navigation'
+import { AddToBag, ProductGrid, SiteShell } from '@/components/serenity-site'
+import { products } from '@/lib/serenity-data'
+
+export function generateStaticParams() { return products.map((product) => ({ slug: product.slug })) }
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) { const { slug } = await params; const product = products.find((item) => item.slug === slug); return { title: product?.name ?? 'Product' } }
+export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) { const { slug } = await params; const product = products.find((item) => item.slug === slug); if (!product) notFound(); return <SiteShell><main><section className="detail"><div className="detail-image"><img src={product.image} alt={product.name} /></div><div className="detail-copy"><p className="eyebrow">{product.category}</p><h1>{product.name}</h1><p className="price">{product.price}</p><p className="description">{product.description}</p><AddToBag /><p className="ingredients"><strong>Key ingredients</strong><br />{product.ingredients}</p></div></section><section className="section"><p className="eyebrow">You may also like</p><h2 style={{ fontFamily: 'var(--serif)', fontSize: '48px', fontWeight: 400, letterSpacing: '-.05em' }}>Build your ritual.</h2><ProductGrid limit={3} /></section></main></SiteShell> }

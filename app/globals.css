@@ -1,0 +1,259 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+:root {
+  /* color scheme */
+  --background-color: #d9d0b4;
+  --primary-color-50: #AFB2AB;
+  --primary-color-100: #A0A39B;
+  --primary-color-200: #91958B;
+  --primary-color-300: #82877C;
+  --primary-color-400: #74796D;
+  --primary-color-500: #666b5e;
+  --primary-color-600: #585C51;
+  --primary-color-700: #4A4E44;
+  --primary-color-800: #3C3F37;
+  --primary-color-900: #2F322B;
+
+  /* typography */
+  --primary-font-color: var(--primary-color-500);
+  --secondary-font-color: #fff;
+
+
+  --background: #f5f3ee;
+  --foreground: #29342d;
+  --sage: #607064;
+  --sage-dark: #35453b;
+  --taupe: #b6a494;
+  --line: #d9d8cf;
+  --cream: #ebe8df;
+
+  /* layout */
+  --header-height: 70px;
+  --header-height-tablet-and-up: 82px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--primary-color-500);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  margin: 0;
+}
+
+
+
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+
+.wordmark {
+  font-family: var(--serif);
+  font-size: 31px;
+  letter-spacing: -.06em;
+  line-height: 1;
+}
+
+.wordmark span {
+  color: var(--taupe);
+}
+
+
+
+.hero h1 {
+  margin: 10px 0 20px;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(54px, 9vw, 112px);
+  line-height: .88;
+  letter-spacing: -.07em;
+}
+
+.hero p:not(.eyebrow) {
+  max-width: 400px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: 10px;
+}
+
+.page-hero {
+  min-height: 390px;
+  padding: 100px clamp(24px, 10vw, 150px) 72px;
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.page-hero h1 {
+  max-width: 800px;
+  margin: 12px 0 0;
+  font: 400 clamp(52px, 7vw, 92px)/.9 var(--serif);
+  letter-spacing: -.06em;
+}
+
+.section {
+  padding: clamp(72px, 10vw, 140px) clamp(24px, 8vw, 120px);
+}
+
+.split-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 10vw, 160px);
+  align-items: center;
+}
+
+.button svg {
+  width: 15px;
+}
+
+.image-frame {
+  min-height: 500px;
+}
+
+.image-frame img {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  object-fit: cover;
+}
+
+.band {
+  background: var(--sage);
+  color: #f6f4ef;
+  --section-eyebrow-color: #d5ddd4;
+  --section-copy-color: #e1e6df;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  border: 0;
+  padding: 16px 22px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.button-dark {
+  background: var(--foreground);
+  color: #fff;
+}
+
+.button-dark:hover {
+  background: var(--sage);
+}
+
+.detail {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  min-height: calc(100vh - 82px);
+}
+
+.detail-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 640px;
+  object-fit: cover;
+}
+
+.detail-copy {
+  padding: clamp(40px, 8vw, 120px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.detail-copy h1 {
+  margin: 14px 0 20px;
+  font: 400 clamp(48px, 5vw, 76px)/.92 var(--serif);
+  letter-spacing: -.06em;
+}
+
+.detail-copy .price {
+  font-size: 14px;
+  color: #737c74;
+}
+
+.detail-copy .description {
+  max-width: 420px;
+  margin: 34px 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #667068;
+}
+
+.ingredients {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+  color: #667068;
+}
+
+@media (max-width: 700px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .hero {
+    min-height: 650px;
+  }
+
+  .hero h1 {
+    font-size: clamp(56px, 17vw, 90px);
+  }
+
+  .page-hero {
+    min-height: 330px;
+    padding-top: 80px;
+  }
+
+  .split-section,
+  .detail {
+    grid-template-columns: 1fr;
+  }
+
+  .split-section .image-frame {
+    order: -1;
+  }
+
+  .image-frame,
+  .image-frame img {
+    min-height: 360px;
+  }
+
+  .detail-image img {
+    min-height: 420px;
+    max-height: 560px;
+  }
+
+  .detail-copy {
+    padding: 60px 24px 90px;
+  }
+}

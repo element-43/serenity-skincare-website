@@ -288,3 +288,4 @@ __v0_jsx-dev-runtime.ts
 .vercel/
 
 ### Project files
+!/lib/types/products/

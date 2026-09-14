@@ -1,0 +1,62 @@
+.container {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  gap: 6px;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: inherit;
+  transition: background-color .2s ease, opacity .2s ease;
+}
+
+.link:hover {
+  background-color: color-mix(in srgb, currentColor 12%, transparent);
+  opacity: .8;
+}
+
+.link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.brandBackground .link {
+  color: #fff;
+}
+
+.brandBackground .link:focus-visible {
+  outline-color: inherit;
+}
+
+.brandBackground .facebook {
+  background: #1877f2;
+}
+
+.brandBackground .whatsapp {
+  background: #25d366;
+}
+
+.brandBackground .instagram {
+  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+.brandBackground .tiktok {
+  background: #000;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link {
+    transition: none;
+  }
+}

@@ -1,0 +1,9 @@
+.content {
+  color: var(--primary-font-color);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.secondary {
+  color: var(--secondary-font-color);
+}
