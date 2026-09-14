@@ -1,20 +1,24 @@
 import { type FC } from 'react';
 
 // components
-import TestimonialGrid from '@/components/content/TestimonialGrid';
 import SectionLink from '@/components/content/SectionLink';
 import SectionTitle from '@/components/content/SectionTitle';
+import TestimonialList from '@/components/content/TestimonialList';
 
+// styles
 import styles from './styles.module.css';
 
-const TestimonialsSection: FC = () => {
+// types
+import type { Props } from './types';
+
+const TestimonialsSection: FC<Props> = ({ testimonials }) => {
   return (
     <section className={styles.container}>
       <SectionTitle>
         Our Testimonials
       </SectionTitle>
 
-      <TestimonialGrid limit={3} />
+      <TestimonialList items={testimonials.slice(0, 3)} />
 
       <SectionLink
         href="/testimonials"

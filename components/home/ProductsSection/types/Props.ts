@@ -2,7 +2,7 @@
 import type { Product } from '@/types/dtos';
 
 interface Props {
-  item: Product;
+  products: Product[];
 }
 
 export default Props;

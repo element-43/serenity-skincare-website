@@ -5,19 +5,22 @@ import styles from './styles.module.css';
 // types
 import type { Props } from './types';
 
-const ProductCard: FC<Props> = ({ product }) => {
+const ProductCard: FC<Props> = ({ item }) => {
   return (
-    <Link href={`/product/${product.slug}`} className={styles.container}>
+    <Link href={`/product/${item.slug}`} className={styles.container}>
       <div className={styles.image}>
-        <img src={product.image} alt={product.name} loading="lazy" />
+        <img src={item.image} alt={item.name} loading="lazy" />
       </div>
+
       <div className={styles.meta}>
-        <div>
-          <p className={styles.eyebrow}>{product.category}</p>
-          <h3>{product.name}</h3>
-        </div>
-        <span>{product.price}</span>
+        {item.category && (
+          <p className={styles.eyebrow}>{item.category}</p>
+        )}
+
+        <h3>{item.name}</h3>
+
       </div>
+
     </Link>
   );
 };

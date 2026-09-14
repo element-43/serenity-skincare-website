@@ -1,19 +1,25 @@
 import { type FC } from 'react';
-import { products } from '@/lib/serenity-data';
+
+// components
 import ProductCard from '../ProductCard';
+
+// styles
 import styles from './styles.module.css';
 
 // types
 import type { Props } from './types';
 
-const ProductGrid: FC<Props> = ({ limit }) => {
+const ProductList: FC<Props> = ({ items }) => {
   return (
     <div className={styles.container}>
-      {products.slice(0, limit).map((product) => (
-        <ProductCard key={product.slug} product={product} />
+      {items.map((product) => (
+        <ProductCard
+          key={product.slug}
+          item={product}
+        />
       ))}
     </div>
   );
 };
 
-export default ProductGrid;
+export default ProductList;

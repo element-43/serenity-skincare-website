@@ -6,6 +6,10 @@ import StorySection from '@/components/home/StorySection';
 import ProductsSection from '@/components/home/ProductsSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 
+// data
+import products from '@/data/products';
+import testimonials from '@/data/testimonials';
+
 // containers
 import PageShell from '@/containers/PageShell';
 
@@ -17,9 +21,9 @@ const HomePage: NextPage = () => {
 
         <StorySection />
 
-        <ProductsSection />
+        <ProductsSection products={products} />
 
-        <TestimonialsSection />
+        <TestimonialsSection testimonials={testimonials} />
 
       </main>
     </PageShell>

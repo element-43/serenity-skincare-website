@@ -15,9 +15,9 @@ export { default as ProductCard } from '@/components/content/ProductCard'
 
 export { default as TestimonialCard } from '@/components/content/TestimonialCard'
 
-export { default as ProductGrid } from '@/components/content/ProductGrid'
+export { default as ProductGrid } from '@/components/content/ProductList'
 
-export { default as TestimonialGrid } from '@/components/content/TestimonialGrid'
+export { default as TestimonialGrid } from '@/components/content/TestimonialList'
 
 export function SiteShell({ children, overlay = false }: { children: React.ReactNode; overlay?: boolean }) { return <><Header overlay={overlay} />{children}<Footer /></> }
 

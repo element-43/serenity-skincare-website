@@ -1,21 +1,24 @@
 import { type FC } from 'react';
 
 // components
-import ProductGrid from '@/components/content/ProductGrid';
+import ProductList from '@/components/content/ProductList';
 import SectionLink from '@/components/content/SectionLink';
 import SectionTitle from '@/components/content/SectionTitle';
 
 // styles
 import styles from './styles.module.css';
 
-const ProductsSection: FC = () => {
+// types
+import type { Props } from './types';
+
+const ProductsSection: FC<Props> = ({ products }) => {
   return (
     <section className={styles.container}>
       <SectionTitle variant="secondary">
         Our Products
       </SectionTitle>
 
-      <ProductGrid limit={3} />
+      <ProductList items={products.slice(0, 3)} />
 
       <SectionLink
         href="/products"
