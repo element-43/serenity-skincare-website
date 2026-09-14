@@ -2,6 +2,6 @@
   background: var(--primary-color-500);
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: var(--gap);
   padding: clamp(72px, 10vw, 140px) clamp(24px, 8vw, 120px);
 }

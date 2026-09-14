@@ -1,6 +1,7 @@
 import { type Metadata, type NextPage } from 'next';
 
 // components
+import PageTitle from '@/components/content/PageTitle';
 import ProductList from '@/components/content/ProductList';
 
 // constants
@@ -20,9 +21,9 @@ export const metadata: Metadata = { title: `Products | ${TITLE}` };
 const ProductsPage: NextPage = () => {
   return (
     <PageShell>
-      <main>
+      <main className={styles.main}>
         <header className={styles.header}>
-          <h1>Our Products</h1>
+          <PageTitle>Our Products</PageTitle>
         </header>
 
         <section className={styles.products} aria-label="All products">

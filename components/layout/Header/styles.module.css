@@ -28,10 +28,3 @@
   inset: 0 0 auto;
   position: absolute;
 }
-
-/* tablet and up */
-@media (min-width: 768px) {
-  .container {
-    height: var(--header-height-tablet-and-up);
-  }
-}
