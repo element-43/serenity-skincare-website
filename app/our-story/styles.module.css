@@ -1,29 +1,4 @@
-/* container */
-.main {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap);
-  padding: var(--padding);
-}
-
-/* header - TODO: move to shared component */
-
-.header {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: var(--gap);
-  text-align: center;
-}
-
 .sectionStory {
   display: flex;
   flex-direction: column;
-}
-
-@media (min-width: 768px) {
-  .header {
-    align-items: flex-start;
-  }
 }

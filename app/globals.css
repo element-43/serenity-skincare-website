@@ -22,9 +22,10 @@
 
   /* layout */
   --header-height: 70px;
-  --padding: clamp(24px, 8vw, 120px);
+  --padding: clamp(24px, 6vw, 120px);
   --gap: 28px;
 
+  /* tablet and up */
   @media (min-width: 768px) {
     --header-height: 82px;
     --gap: 32px;

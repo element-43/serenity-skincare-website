@@ -3,6 +3,7 @@ import { type NextPage } from 'next';
 // components
 import HeroSection from '@/components/home/HeroSection';
 import StorySection from '@/components/home/StorySection';
+import Page from '@/components/content/Page';
 import ProductsSection from '@/components/home/ProductsSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 
@@ -10,23 +11,21 @@ import TestimonialsSection from '@/components/home/TestimonialsSection';
 import products from '@/data/products';
 import testimonials from '@/data/testimonials';
 
-// containers
-import PageShell from '@/containers/PageShell';
-
 const HomePage: NextPage = () => {
   return (
-    <PageShell overlay={true}>
-      <main>
-        <HeroSection />
+    <Page>
+      <Page.Header overlay={true} />
 
-        <StorySection />
+      <HeroSection />
 
-        <ProductsSection products={products} />
+      <StorySection />
 
-        <TestimonialsSection testimonials={testimonials} />
+      <ProductsSection products={products} />
 
-      </main>
-    </PageShell>
+      <TestimonialsSection testimonials={testimonials} />
+
+      <Page.Footer />
+    </Page>
   );
 };
 

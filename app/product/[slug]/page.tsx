@@ -4,16 +4,13 @@ import { notFound } from 'next/navigation';
 import { type ReactElement } from 'react';
 
 // components
-import PageTitle from '@/components/content/PageTitle';
+import Page from '@/components/content/Page';
 import ProductList from '@/components/content/ProductList';
 import SectionLink from '@/components/content/SectionLink';
 import SectionTitle from '@/components/content/SectionTitle';
 
 // constants
 import { TITLE } from '@/constants';
-
-// containers
-import PageShell from '@/containers/PageShell';
 
 // data
 import products from '@/data/products';
@@ -48,12 +45,14 @@ const ProductPage: (params: Props) => Promise<ReactElement> = async ({ params }:
   const relatedProducts = products.filter((item) => item.slug !== slug).slice(0, 3);
 
   return (
-    <PageShell>
-      <main className={styles.main}>
-        <header className={styles.header}>
-          <PageTitle>{product.name}</PageTitle>
-        </header>
+    <Page>
+      <Page.Header />
 
+      <Page.Title>
+        {product.name}
+      </Page.Title>
+
+      <Page.Content>
         <section className={styles.details} aria-labelledby="product-name">
           <div className={styles.image}>
             <Image
@@ -77,8 +76,10 @@ const ProductPage: (params: Props) => Promise<ReactElement> = async ({ params }:
 
           </section>
         )}
-      </main>
-    </PageShell>
+      </Page.Content>
+
+      <Page.Footer />
+    </Page>
   );
 };
 

@@ -1,6 +1,5 @@
 import { type FC, useMemo } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 // components
 import SocialMediaLinks from '@/components/social/SocialMediaLinks';
@@ -9,10 +8,10 @@ import SocialMediaLinks from '@/components/social/SocialMediaLinks';
 import mainMenu from '@/menus/main-menu';
 
 // styles
-import styles from './styles.module.css';
+import styles from '../styles.footer.module.css';
 
 // types
-import type { Props } from './types';
+import type { FooterProps as Props } from '../types';
 
 const Footer: FC<Props> = () => {
   const year = useMemo(() => (new Date().getFullYear()), []);

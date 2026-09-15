@@ -6,10 +6,10 @@ import Image from 'next/image';
 import SocialMediaLinks from '@/components/social/SocialMediaLinks';
 
 // styles
-import styles from './styles.module.css';
+import styles from '../styles.header.module.css';
 
 // types
-import type { Props } from './types';
+import type { HeaderProps as Props } from '../types';
 
 // utilities
 import { cn } from '@/utilities';
@@ -18,7 +18,7 @@ const Header: FC<Props> = ({ overlay }) => {
   return (
     <header
       className={cn(
-        styles.container,
+        styles.header,
         overlay && styles.overlay,
       )}
     >

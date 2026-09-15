@@ -1,11 +1,21 @@
 .container {
   display: grid;
+  gap: 16px;
   grid-template-columns: 1fr;
-  gap: 16px 10px;
 }
 
+/* tablet and up */
 @media (min-width: 768px) {
   .container {
+    gap: 18px;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* desktop and up */
+@media (min-width: 1024px) {
+  .container {
+    gap: 24px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }

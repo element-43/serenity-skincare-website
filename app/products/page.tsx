@@ -1,36 +1,34 @@
 import { type Metadata, type NextPage } from 'next';
 
 // components
-import PageTitle from '@/components/content/PageTitle';
+import Page from '@/components/content/Page';
 import ProductList from '@/components/content/ProductList';
 
 // constants
 import { TITLE } from '@/constants';
 
-// containers
-import PageShell from '@/containers/PageShell';
-
 // data
 import products from '@/data/products';
-
-// styles
-import styles from './styles.module.css';
 
 export const metadata: Metadata = { title: `Products | ${TITLE}` };
 
 const ProductsPage: NextPage = () => {
   return (
-    <PageShell>
-      <main className={styles.main}>
-        <header className={styles.header}>
-          <PageTitle>Our Products</PageTitle>
-        </header>
+    <Page>
+      <Page.Header />
 
-        <section className={styles.products} aria-label="All products">
+      <Page.Title>
+        Our Products
+      </Page.Title>
+
+      <Page.Content>
+        <section aria-label="All products">
           <ProductList items={products} />
         </section>
-      </main>
-    </PageShell>
+      </Page.Content>
+
+      <Page.Footer />
+    </Page>
   );
 };
 
