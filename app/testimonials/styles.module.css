@@ -6,7 +6,7 @@
 
 .testimonial {
   background: var(--surface-background-color);
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   color: var(--primary-font-color);
   display: flex;
   flex-direction: column;

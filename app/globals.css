@@ -15,15 +15,18 @@
   --primary-color-700: #4A4E44;
   --primary-color-800: #3C3F37;
   --primary-color-900: #2F322B;
+  --secondary-color-500: #d9d0b4;
+  --tertiary-color-500: #a68a64;
 
   /* typography */
   --primary-font-color: var(--primary-color-500);
   --secondary-font-color: #fff;
 
   /* layout */
+  --border-radius: 12px;
   --header-height: 70px;
   --padding: clamp(24px, 6vw, 120px);
-  --gap: 28px;
+  --gap: 24px;
 
   /* tablet and up */
   @media (min-width: 768px) {

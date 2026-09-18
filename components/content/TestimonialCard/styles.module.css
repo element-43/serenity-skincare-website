@@ -1,6 +1,6 @@
 .container {
   background: var(--surface-background-color);
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   display: flex;
   flex-direction: column;
   min-height: 230px;

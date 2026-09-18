@@ -17,7 +17,7 @@ const StorySection: FC = () => {
         </SectionTitle>
 
         <SectionParagraph>
-          Serenity is a small collection of effective, uncomplicated essentials. We use considered botanicals, honest ingredients, and sensory textures to make the daily ritual feel like yours again.
+          Serenity is a small essentials that uses infused botanicals and honest ingredients to make your daily ritual feel grounded in nature.
         </SectionParagraph>
 
         <SectionLink

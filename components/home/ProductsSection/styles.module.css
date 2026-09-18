@@ -3,5 +3,64 @@
   display: flex;
   flex-direction: column;
   gap: var(--gap);
-  padding: clamp(72px, 10vw, 140px) clamp(24px, 8vw, 120px);
+  padding: var(--padding);
+}
+
+/* other ranges */
+
+.otherRangesContainer {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.otherRangesContent {
+  background-color: var(--surface-background-color);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  max-width: 640px;
+  padding: 2rem 2.5rem;
+  width: 100%;
+}
+
+.otherRangesContainer p {
+  color: var(--primary-font-color);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.otherRangesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.otherRangesItem {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.otherRangesItem::before {
+  background-color: var(--tertiary-color-500);
+  border-radius: 50%;
+  content: '';
+  left: 0;
+  position: absolute;
+  height: 6px;
+  top: 0.5em;
+  width: 6px;
+}
+
+.otherRangesSocialMediaLinksContainer {
+  display: flex;
+  justify-content: center;
 }
