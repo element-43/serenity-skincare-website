@@ -5,7 +5,7 @@ import Link from 'next/link';
 import SocialMediaLinks from '@/components/social/SocialMediaLinks';
 
 // menus
-import mainMenu from '@/menus/main-menu';
+import footerMenu from '@/menus/footer-menu';
 
 // styles
 import styles from '../styles.footer.module.css';
@@ -13,7 +13,11 @@ import styles from '../styles.footer.module.css';
 // types
 import type { FooterProps as Props } from '../types';
 
+// utilities
+import { randomAlphaNumericString } from '@/utilities/strings';
+
 const Footer: FC<Props> = () => {
+  const menuKeyPrefix = useMemo(() => randomAlphaNumericString(), []);
   const year = useMemo(() => (new Date().getFullYear()), []);
 
   return (
@@ -30,8 +34,8 @@ const Footer: FC<Props> = () => {
         <p className={styles.copyright}>© {year} Serenity Skincare</p>
 
         <nav aria-label="Footer navigation" className={styles.menu}>
-          {mainMenu.map((item) => (
-            <Link key={item.href} href={item.href}>
+          {footerMenu.map((item, index) => (
+            <Link key={`${menuKeyPrefix}-${index}`} href={item.href}>
               {item.label}
             </Link>
           ))}

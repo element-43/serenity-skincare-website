@@ -1,7 +1,7 @@
 // types
 import type { MenuItem } from '@/types';
 
-const mainMenu: MenuItem[] = [
+const footerMenu: MenuItem[] = [
   {
     active: true,
     label: 'Our story',
@@ -14,14 +14,9 @@ const mainMenu: MenuItem[] = [
   },
   {
     active: true,
-    label: `Women's Power Anti-Ageing Range (Peri/Menopausal Skin)`,
-    href: '/products',
-  },
-  {
-    active: true,
     label: 'Customer Testimonials',
     href: '/testimonials',
   },
 ];
 
-export default mainMenu;
+export default footerMenu;

@@ -49,7 +49,7 @@
 .menu {
   align-items: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   font-family: var(--font-heading);
   font-weight: 600;
   gap: clamp(24px, 4vw, 56px);
@@ -96,5 +96,9 @@
     align-items: center;
     gap: var(--gap);
     justify-content: space-between;
+  }
+
+  .menu {
+    flex-direction: row;
   }
 }
