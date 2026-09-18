@@ -1,4 +1,5 @@
 import { type Metadata, NextPage } from 'next';
+import { Suspense } from 'react';
 
 // components
 import FilterableProductList from '@/components/content/FilterableProductList';
@@ -24,10 +25,12 @@ const ProductsPage: NextPage = () => {
 
       <Page.Content>
         <section aria-label="All products">
-          <FilterableProductList
-            categories={categories}
-            products={products}
-          />
+          <Suspense>
+            <FilterableProductList
+              categories={categories}
+              products={products}
+            />
+          </Suspense>
         </section>
       </Page.Content>
 
