@@ -1,4 +1,37 @@
+.content {
+  padding: var(--padding) 0;
+}
+
 .sectionStory {
   display: flex;
   flex-direction: column;
+}
+
+.image {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.image img {
+  object-fit: contain;
+  max-width: 1000px
+}
+
+/* tablet and up */
+@media (min-width: 768px) {
+  .content {
+    padding: var(--padding);
+  }
+
+  .image img {
+    width: 85%;
+  }
+}
+
+/* tablet and up */
+@media (min-width: 1024px) {
+  .image img {
+    width: 75%;
+  }
 }

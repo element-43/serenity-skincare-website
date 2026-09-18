@@ -15,12 +15,14 @@ const OurStoryPage: NextPage = () => {
   return (
     <Page>
       <Page.Header />
-      <Page.Title>
-        Our Story
-      </Page.Title>
-
-      <Page.Content>
-        <section className={styles.sectionStory} aria-label="The sotry behind Serenity Skincare">
+      <Page.Content className={styles.content}>
+        <section className={styles.sectionStory} aria-label="The story behind Serenity Skincare">
+          <div className={styles.image}>
+            <img
+              alt="The story behind Serenity Skincare"
+              src="/images/our_story.jpg"
+            />
+          </div>
         </section>
       </Page.Content>
 
