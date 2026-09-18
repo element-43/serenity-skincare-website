@@ -1,7 +1,8 @@
 interface Product {
-  category?: string;
+  categories?: string[];
   image: string;
   name: string;
+  order: number;
   slug: string;
 }
 

@@ -1,6 +1,7 @@
 .container {
   align-items: flex-end;
   aspect-ratio: 1 / 1.18;
+  border-radius: 5px;
   color: #fff;
   display: flex;
   position: relative;
@@ -57,11 +58,4 @@
   letter-spacing: -.03em;
   margin: 6px 0 0;
   text-transform: uppercase;
-}
-
-.eyebrow {
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: .14em;
-  font-size: 10px;
 }

@@ -13,12 +13,7 @@ const ProductCard: FC<Props> = ({ item }) => {
       </div>
 
       <div className={styles.meta}>
-        {item.category && (
-          <p className={styles.eyebrow}>{item.category}</p>
-        )}
-
         <h3>{item.name}</h3>
-
       </div>
 
     </Link>

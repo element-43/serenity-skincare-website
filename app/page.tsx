@@ -20,7 +20,7 @@ const HomePage: NextPage = () => {
 
       <StorySection />
 
-      <ProductsSection products={products} />
+      <ProductsSection products={products.sort((a, b) => a.order - b.order)} />
 
       <TestimonialsSection testimonials={testimonials} />
 

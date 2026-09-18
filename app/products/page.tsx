@@ -1,13 +1,14 @@
-import { type Metadata, type NextPage } from 'next';
+import { type Metadata, NextPage } from 'next';
 
 // components
+import FilterableProductList from '@/components/content/FilterableProductList';
 import Page from '@/components/content/Page';
-import ProductList from '@/components/content/ProductList';
 
 // constants
 import { TITLE } from '@/constants';
 
 // data
+import categories from '@/data/categories';
 import products from '@/data/products';
 
 export const metadata: Metadata = { title: `Products | ${TITLE}` };
@@ -23,7 +24,10 @@ const ProductsPage: NextPage = () => {
 
       <Page.Content>
         <section aria-label="All products">
-          <ProductList items={products} />
+          <FilterableProductList
+            categories={categories}
+            products={products}
+          />
         </section>
       </Page.Content>
 

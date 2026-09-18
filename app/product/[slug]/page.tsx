@@ -36,13 +36,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 const ProductPage: (params: Props) => Promise<ReactElement> = async ({ params }: Props) => {
   const { slug } = await params;
-  const product = products.find((item) => item.slug === slug);
+  const product = products.find((item) => item.slug === slug) || null;
 
   if (!product) {
     return notFound();
   }
 
-  const relatedProducts = products.filter((item) => item.slug !== slug).slice(0, 3);
+  const relatedProducts = products
+    .sort((a, b) => a.order - b.order)
+    .filter((item) => item.slug !== slug).slice(0, 3);
 
   return (
     <Page>
