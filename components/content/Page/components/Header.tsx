@@ -33,7 +33,7 @@ const Header: FC<Props> = ({ overlay }) => {
         />
       </Link>
 
-      <SocialMediaLinks />
+      <SocialMediaLinks brandBackground={true} />
 
     </header>
   );
