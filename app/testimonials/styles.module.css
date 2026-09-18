@@ -6,11 +6,12 @@
 
 .testimonial {
   background: var(--surface-background-color);
+  border-radius: 5px;
+  color: var(--primary-font-color);
   display: flex;
   flex-direction: column;
   gap: var(--gap);
   padding: clamp(20px, 3vw, 40px);
-  color: var(--primary-font-color);
 }
 
 .image {

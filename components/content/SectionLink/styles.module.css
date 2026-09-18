@@ -1,5 +1,4 @@
 .link {
-  width: fit-content;
   align-items: center;
   border-bottom-color: var(--primary-font-color);
   border-bottom-style: solid;
@@ -9,6 +8,7 @@
   font-size: 14px;
   gap: 12px;
   padding-bottom: 7px;
+  width: fit-content;
 }
 
 .link svg {

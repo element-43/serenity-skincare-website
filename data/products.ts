@@ -94,14 +94,14 @@ const products: Product[] = [
     slug: "grass-fed-beef-tallow-miracle-night-balm",
   },
   {
-    categories: ['women'],
+    categories: ['women', 'anti-aging'],
     image: "/products/womens_power_anti_aging_starter_package.jpg",
     name: `Women's Power Anti-Aging Starter Package`,
     order: 13,
     slug: "womens-power-anti-aging-starter-package",
   },
   {
-    categories: ['women', 'anti-aging'],
+    categories: ['women'],
     image: "/products/order_of_use.jpg",
     name: 'Order of Use',
     order: 14,
