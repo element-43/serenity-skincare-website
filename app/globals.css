@@ -3,8 +3,6 @@
 
 :root {
   /* color scheme */
-  --background-color: #d9d0b4;
-  --surface-background-color: #f5f3ee;
   --primary-color-50: #AFB2AB;
   --primary-color-100: #A0A39B;
   --primary-color-200: #91958B;
@@ -16,7 +14,11 @@
   --primary-color-800: #3C3F37;
   --primary-color-900: #2F322B;
   --secondary-color-500: #d9d0b4;
-  --tertiary-color-500: #a68a64;
+  --tertiary-color-500: #631212;
+
+  /* backgrounds */
+  --background-color: var(--secondary-color-500);
+  --surface-background-color: #FAEFDF;
 
   /* typography */
   --primary-font-color: var(--primary-color-500);

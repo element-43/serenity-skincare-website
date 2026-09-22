@@ -33,30 +33,32 @@ const ProductsSection: FC<Props> = ({ products }) => {
       />
 
       <div className={styles.otherRangesContainer}>
-        <div className={styles.otherRangesContent}>
-          <p>
-            Please visit our socials for further information on our other ranges, including:
-          </p>
+        <div className={styles.otherRangesOuter}>
+          <div className={styles.otherRangesContent}>
+            <p>
+              Please visit our socials for further information on our other ranges, including:
+            </p>
 
-          <ul className={styles.otherRangesList}>
-            {[
-              `Girl's healthy range (18-35 years)`,
-              'Teenage range (12+ years)',
-              'The gentlemen, anti-ageing range',
-              'Speciality skincare ranges: acne, Eczema, Psoriasis and Rosacea',
-              'Well-being range',
-            ].map((value, index) => (
-              <li
-                className={styles.otherRangesItem}
-                key={`${otherRangeListPrefix}-${index}`}
-              >
-                {value}
-              </li>
-            ))}
-          </ul>
+            <ul className={styles.otherRangesList}>
+              {[
+                `Girl's healthy range (18-35 years)`,
+                'Teenage range (12+ years)',
+                'The gentlemen, anti-ageing range',
+                'Speciality skincare ranges: acne, Eczema, Psoriasis and Rosacea',
+                'Well-being range',
+              ].map((value, index) => (
+                <li
+                  className={styles.otherRangesItem}
+                  key={`${otherRangeListPrefix}-${index}`}
+                >
+                  {value}
+                </li>
+              ))}
+            </ul>
 
-          <div className={styles.otherRangesSocialMediaLinksContainer}>
-            <SocialMediaLinks brandBackground={true} />
+            <div className={styles.otherRangesSocialMediaLinksContainer}>
+              <SocialMediaLinks brandBackground={true} />
+            </div>
           </div>
         </div>
       </div>

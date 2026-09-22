@@ -15,8 +15,16 @@
   justify-content: center;
 }
 
-.otherRangesContent {
+.otherRangesOuter {
   background-color: var(--surface-background-color);
+  border-radius: var(--border-radius);
+  display: flex;
+  padding: 1rem;
+}
+
+.otherRangesContent {
+  background-color: transparent;
+  border: 3px solid var(--tertiary-color-500);
   border-radius: var(--border-radius);
   display: flex;
   flex-direction: column;
@@ -28,7 +36,6 @@
 
 .otherRangesContainer p {
   color: var(--primary-font-color);
-  font-size: 0.95rem;
   line-height: 1.6;
 }
 
@@ -45,7 +52,6 @@
 .otherRangesItem {
   position: relative;
   padding-left: 1.5rem;
-  font-size: 0.9rem;
   line-height: 1.5;
 }
 
