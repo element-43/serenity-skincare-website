@@ -7,13 +7,23 @@
 
 .link {
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
   border-radius: 50%;
   color: inherit;
+  align-items: center;
+  height: 36px;
+  justify-content: center;
   transition: background-color .2s ease, opacity .2s ease;
+  width: 36px;
+}
+
+.linkSm {
+  height: 24px;
+  width: 24px;
+}
+
+.linkXs {
+  height: 12px;
+  width: 12px;
 }
 
 .link:hover {
@@ -51,8 +61,8 @@
 }
 
 .icon {
-  width: 18px;
-  height: 18px;
+  height: 50%;
+  width: 50%;
 }
 
 @media (prefers-reduced-motion: reduce) {

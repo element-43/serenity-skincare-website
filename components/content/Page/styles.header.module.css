@@ -1,8 +1,8 @@
 .header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   background: var(--primary-color-500);
   color: #fff;
-  display: flex;
-  flex-direction: column;
   gap: 14px;
   padding: 15px clamp(24px, 5vw, 76px);
   position: relative;
@@ -11,14 +11,13 @@
 
 .logo {
   display: block;
-  width: 240px;
   min-width: 0;
 }
 
 .logoImage {
   display: block;
-  width: 100%;
   height: auto;
+  width: 100%;
 }
 
 .overlay {
@@ -28,29 +27,14 @@
 }
 
 .enquiryLink {
-  align-self: flex-end;
   font-family: var(--font-heading);
-  font-size: 12px;
+  font-size: 7px;
   font-weight: 400;
-  padding: 0 0 4px;
+  padding: 0;
   position: relative;
   text-transform: uppercase;
-}
-
-.enquiryLink::after {
-  background: currentColor;
-  content: '';
-  height: 1px;
-  inset: auto 0 0;
-  position: absolute;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform .25s ease;
-}
-
-.enquiryLink:hover::after,
-.enquiryLink:focus-visible::after {
-  transform: scaleX(1);
+  text-align: right;
+  word-break: keep-all;
 }
 
 /* containers */
@@ -76,7 +60,34 @@
 @media (min-width: 768px) {
   .header {
     align-items: center;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .logo {
+    width: 240px;
+  }
+
+  .enquiryLink {
+    align-self: flex-end;
+    font-size: 14px;
+    padding: 0 0 4px;
+  }
+
+  .enquiryLink::after {
+    background: currentColor;
+    content: '';
+    height: 1px;
+    inset: auto 0 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .25s ease;
+  }
+
+  .enquiryLink:hover::after,
+  .enquiryLink:focus-visible::after {
+    transform: scaleX(1);
   }
 }
