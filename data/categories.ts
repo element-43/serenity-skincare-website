@@ -8,9 +8,9 @@ const categories: Category[] = [
     slug: 'women',
   },
   {
-    name: 'Anti-Aging',
+    name: 'Anti-Ageing',
     order: 1,
-    slug: 'anti-aging',
+    slug: 'anti-ageing',
   },
 ];
 

@@ -3,11 +3,11 @@ import type { Product } from '@/types/dtos';
 
 const products: Product[] = [
   {
-    categories: ['women', 'anti-aging'],
-    image: "/products/womens_power_anti_aging_range.jpg",
-    name: `Women's Power Anti-Aging Range`,
+    categories: ['women', 'anti-ageing'],
+    image: "/products/womens_power_anti_ageing_range.jpg",
+    name: `Women's Power Anti-Ageing Range`,
     order: 0,
-    slug: "womens-power-anti-aging-range",
+    slug: "womens-power-anti-ageing-range",
   },
   {
     categories: ['women'],
@@ -94,11 +94,11 @@ const products: Product[] = [
     slug: "grass-fed-beef-tallow-miracle-night-balm",
   },
   {
-    categories: ['women', 'anti-aging'],
-    image: "/products/womens_power_anti_aging_starter_package.jpg",
-    name: `Women's Power Anti-Aging Starter Package`,
+    categories: ['women', 'anti-ageing'],
+    image: "/products/womens_power_anti_ageing_starter_package.jpg",
+    name: `Women's Power Anti-Ageing Starter Package`,
     order: 13,
-    slug: "womens-power-anti-aging-starter-package",
+    slug: "womens-power-anti-ageing-starter-package",
   },
   {
     categories: ['women'],

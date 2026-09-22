@@ -42,7 +42,7 @@ const ProductsSection: FC<Props> = ({ products }) => {
             {[
               `Girl's healthy range (18-35 years)`,
               'Teenage range (12+ years)',
-              'The gentlemen, anti-aging range',
+              'The gentlemen, anti-ageing range',
               'Speciality skincare ranges: acne, Eczema, Psoriasis and Rosacea',
               'Well-being range',
             ].map((value, index) => (

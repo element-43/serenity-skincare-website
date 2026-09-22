@@ -15,7 +15,7 @@ const mainMenu: MenuItem[] = [
   {
     active: true,
     label: `Women's Power Anti-Ageing Range (Peri/Menopausal Skin)`,
-    href: '/products?category=anti-aging',
+    href: '/products?category=anti-ageing',
   },
   {
     active: true,
